@@ -462,7 +462,8 @@
       marker16,
       marker17,
       marker18,
-      marker19);
+      marker19,
+      marker20);
   }
   museums.addEventListener('click',function(){
     createMarkersMuseums();
