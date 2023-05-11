@@ -252,6 +252,12 @@ a{
     margin-top: 1%;
     text-indent: 40px;
 }
+.img-people{
+    width: 150px;
+    margin-left: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px gray;
+}
 
 
 
@@ -326,6 +332,10 @@ a{
     .img-culture{
         width: 200px;
         height: 100px;
+    }
+    .img-people{
+        width: 100px;
+        height: 50px;
     }
     .title-object{
         font-size: 12px;
