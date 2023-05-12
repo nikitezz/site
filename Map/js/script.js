@@ -395,7 +395,7 @@
     marker4.on('click', function(){
       blockModalCity3.classList.add('active1_culture');
     });
-    var marker5 = L.marker([], {icon:fiolIcon}).addTo(mymap);
+    var marker5 = L.marker([52.42416,31.014281], {icon:fiolIcon}).addTo(mymap);
     marker5.on('click',function(){
       blockModalCity4.classList.add('active1_culture');
     })
@@ -436,7 +436,7 @@
     //   blockModalMuseums1.classList.add('active1_culture')
     // });
 
-    markersCelebrity.push(marker2,marker3);
+    markersCelebrity.push(marker2);
   }
   celebrity.addEventListener('click',function(){
     createMarkersCelebrity();
