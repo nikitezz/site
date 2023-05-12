@@ -217,6 +217,7 @@ a{
     z-index: 999;
     box-shadow: 0px 0px 10px 2px grey;
     display: none;
+    overflow-y: scroll; /* прокрутка по вертикали */
 }
 .active1_culture{
     display: block;
@@ -343,6 +344,6 @@ a{
         text-align: center;
     }
     .content-modal{
-        font-size: 11px;
+        font-size: 10px;
     }
 }

@@ -288,6 +288,21 @@
     blockModalIndustry10.classList.remove('active1_culture');
   })
 
+  // Стареёшие города
+  const blockModalCity1 = document.getElementById('block-modal1-city');
+  const closeCity1 = document.getElementById('close1-city').addEventListener('click',function(){
+    blockModalCity1.classList.remove('active1_culture');
+  })
+  const blockModalCity2 = document.getElementById('block-modal2-city');
+  const closeCity2 = document.getElementById('close2-city').addEventListener('click',function(){
+    blockModalCity2.classList.remove('active1_culture');
+  })
+  const blockModalCity3 = document.getElementById('block-modal3-city');
+  const closeCity3 = document.getElementById('close3-city').addEventListener('click',function(){
+    blockModalCity3.classList.remove('active1_culture');
+  })
+
+
 
   // Знаменитые люди
   const blockModalPeople1 = document.getElementById('block-modal1-people');
@@ -364,15 +379,19 @@
       popupAnchor: [1, -34],
       shadowSize: [41, 41]
   });
-    var marker2 = L.marker([53.7870000,30.2677000], {icon:fiolIcon}).addTo(mymap);
+    var marker2 = L.marker([52.049019,29.267301], {icon:fiolIcon}).addTo(mymap);
     marker2.on('click', function() {
-      alert('стар город 1');
+      blockModalCity1.classList.add('active1_culture');
     });
-    var marker3 = L.marker([54.9458000,30.7953000], {icon:fiolIcon}).addTo(mymap);
+    var marker3 = L.marker([52.066329,27.740578], {icon:fiolIcon}).addTo(mymap);
     marker3.on('click', function(){
-      alert('стар город 2');
+      blockModalCity2.classList.add('active1_culture');
     });
-    markersStarCity.push(marker2,marker3);
+    var marker4 = L.marker([52.42416,31.014281], {icon:fiolIcon}).addTo(mymap);
+    marker4.on('click', function(){
+      blockModalCity3.classList.add('active1_culture');
+    });
+    markersStarCity.push(marker2,marker3,marker4);
   }
   starCity.addEventListener('click',function(){
     createMarkersStarCity();
@@ -801,7 +820,7 @@
     
           // Создаем маркер на местоположении пользователя
            var marker = L.marker([lat, lng]).addTo(mymap);
-          marker.bindPopup("<b>Ваше местопложение!</b>");
+          marker.bindPopup("<b>Ваше местопложение!</b>"); 
           // Перемещаем карту к местоположению пользователя
           mymap.setView([lat, lng], 15);
       });
