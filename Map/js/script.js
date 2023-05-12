@@ -301,6 +301,10 @@
   const closeCity3 = document.getElementById('close3-city').addEventListener('click',function(){
     blockModalCity3.classList.remove('active1_culture');
   })
+  const blockModalCity4 = document.getElementById('block-modal4-city');
+  const closeCity4 = document.getElementById('close4-city').addEventListener('click',function(){
+    blockModalCity4.classList.remove('active1_culture');
+  })
 
 
 
@@ -391,7 +395,11 @@
     marker4.on('click', function(){
       blockModalCity3.classList.add('active1_culture');
     });
-    markersStarCity.push(marker2,marker3,marker4);
+    var marker5 = L.marker([], {icon:fiolIcon}).addTo(mymap);
+    marker5.on('click',function(){
+      blockModalCity4.classList.add('active1_culture');
+    })
+    markersStarCity.push(marker2,marker3,marker4,marker5);
   }
   starCity.addEventListener('click',function(){
     createMarkersStarCity();
