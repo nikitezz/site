@@ -367,6 +367,38 @@
   const closePeople12 = document.getElementById('close12-people').addEventListener('click',function(){
     blockModalPeople12.classList.remove('active1_culture');
   })
+  const blockModalPeople13 = document.getElementById('block-modal13-people');
+  const closePeople13 = document.getElementById('close13-people').addEventListener('click',function(){
+    blockModalPeople13.classList.remove('active1_culture');
+  })
+  const blockModalPeople14 = document.getElementById('block-modal14-people');
+  const closePeople14 = document.getElementById('close14-people').addEventListener('click',function(){
+    blockModalPeople14.classList.remove('active1_culture');
+  })
+  const blockModalPeople15 = document.getElementById('block-modal15-people');
+  const closePeople15 = document.getElementById('close15-people').addEventListener('click',function(){
+    blockModalPeople15.classList.remove('active1_culture');
+  })
+  const blockModalPeople16 = document.getElementById('block-modal16-people');
+  const closePeople16 = document.getElementById('close16-people').addEventListener('click',function(){
+    blockModalPeople16.classList.remove('active1_culture');
+  })
+  const blockModalPeople17 = document.getElementById('block-modal17-people');
+  const closePeople17 = document.getElementById('close17-people').addEventListener('click',function(){
+    blockModalPeople17.classList.remove('active1_culture');
+  })
+  const blockModalPeople18 = document.getElementById('block-modal18-people');
+  const closePeople18 = document.getElementById('close18-people').addEventListener('click',function(){
+    blockModalPeople18.classList.remove('active1_culture');
+  })
+  const blockModalPeople19 = document.getElementById('block-modal19-people');
+  const closePeople19 = document.getElementById('close19-people').addEventListener('click',function(){
+    blockModalPeople19.classList.remove('active1_culture');
+  })
+  const blockModalPeople20 = document.getElementById('block-modal19-people');
+  const closePeople20 = document.getElementById('close20-people').addEventListener('click',function(){
+    blockModalPeople20.classList.remove('active1_culture');
+  })
 
 
 
@@ -530,8 +562,42 @@
     marker12.on('click', function(){
       blockModalPeople12.classList.add('active1_culture');
     })
+    var marker13 = L.marker([52.294281,31.187207], {icon:fiolIcon}).addTo(mymap);
+    marker13.on('click', function(){
+      blockModalPeople13.classList.add('active1_culture');
+    })
+    var marker14 = L.marker([52.103153,31.195723], {icon:fiolIcon}).addTo(mymap);
+    marker14.on('click', function(){
+      blockModalPeople14.classList.add('active1_culture');
+    })
+    var marker15 = L.marker([52.512193,30.579667], {icon:fiolIcon}).addTo(mymap);
+    marker15.on('click', function(){
+      blockModalPeople15.classList.add('active1_culture');
+    })
+    var marker16 = L.marker([52.291042,31.091096], {icon:fiolIcon}).addTo(mymap);
+    marker16.on('click', function(){
+      blockModalPeople16.classList.add('active1_culture');
+    })
+    var marker17 = L.marker([52.42644396334201,30.910669419847707], {icon:fiolIcon}).addTo(mymap);
+    marker17.on('click', function(){
+      blockModalPeople17.classList.add('active1_culture');
+    })
+    var marker18 = L.marker([52.437393,31.021917], {icon:fiolIcon}).addTo(mymap);
+    marker18.on('click', function(){
+      blockModalPeople18.classList.add('active1_culture');
+    })
+    var marker19 = L.marker([52.43597165662238,31.017551628519755],{icon:fiolIcon}).addTo(mymap);
+    marker19.on('click',function(){
+      blockModalPeople19.classList.add('active1_culture');
+    })
+    var marker20 = L.marker([52.43854200105717,31.0052778400676], {icon:fiolIcon}).addTo(mymap);
+    marker20.on('click',function(){
+      blockModalPeople20.classList.add('active1_culture');
+    })
 
-    markersCelebrity.push(marker2,marker1,marker3,marker4,marker5,marker6,marker7,marker8,marker9,marker10,marker11,marker12);
+    markersCelebrity.push(marker2,marker1,marker3,marker4,marker5,marker6,marker7,marker8,
+                          marker9,marker10,marker11,marker12,marker13,marker14,marker15,marker16,
+                          marker17,marker18,marker19,marker20);
   }
   celebrity.addEventListener('click',function(){
     createMarkersCelebrity();

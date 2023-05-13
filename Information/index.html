@@ -301,17 +301,14 @@
             </div>
             <div class="block-burger" id="block-burger">
                 <img src="./img/close (1) 2.png" alt="" class="close-modal2" id="close-modal2">
-                <button class="button1 button">Энергетика</button>
-                <button class="button2 button">Достопримичательности</button>
-                <button class="button3 button">Культурные ценности</button>
-                <button class="button4 button">Старейшие города</button>
-                <button class="button5 button">Знаменитые люди</button>
-                <button class="button6 button">Промышленность</button>
-                <button class="button7 button">Памятники</button>
-                <button class="button8 button">Реки</button>
-                <button class="button9 button">Озёра</button>
-                <button class="button10 button">Музеи</button>
-                <button class="button11 button">Заповедники</button>
+                <button class="button1 button" id="button1">Энергетика</button>
+                <button class="button2 button" id="button2">Достопримичательности</button>
+                <button class="button3 button" id="button3">Культурные ценности</button>
+                <button class="button4 button" id="button4">Старейшие города</button>
+                <button class="button5 button" id="button5">Знаменитые люди</button>
+                <button class="button6 button" id="button6">Промышленность</button>
+                <button class="button8 button" id="button8">Реки</button>
+                <button class="button9 button" id="button9">Озёра</button>
 
             </div>
         </main>
@@ -334,6 +331,70 @@
             blockBurger.classList.toggle('active2');
         })
         closeMod1.addEventListener('click',function(){
+            blockBurger.classList.remove('active2');
+        })
+        
+        const btn1 = document.getElementById('button2')
+        btn1.addEventListener('click',function(){
+            window.scrollTo({
+            top:1100,
+            left:0,
+            behavior:'smooth',
+             })
+            blockBurger.classList.remove('active2');
+        })
+        const btn2 = document.getElementById('button3')
+        btn2.addEventListener('click',function(){
+            window.scrollTo({
+            top:3200,
+            left:0,
+            behavior:'smooth',
+             })
+            blockBurger.classList.remove('active2');
+        })
+        const btn3 = document.getElementById('button4')
+        btn3.addEventListener('click',function(){
+            window.scrollTo({
+            top:5200,
+            left:0,
+            behavior:'smooth',
+             })
+            blockBurger.classList.remove('active2');
+        })
+        const btn4 = document.getElementById('button5')
+        btn4.addEventListener('click',function(){
+            window.scrollTo({
+            top:7200,
+            left:0,
+            behavior:'smooth',
+             })
+            blockBurger.classList.remove('active2');
+        })
+        const btn5 = document.getElementById('button6')
+        btn5.addEventListener('click',function(){
+            window.scrollTo({
+            top:9150,
+            left:0,
+            behavior:'smooth',
+             })
+            blockBurger.classList.remove('active2');
+        })
+        const btn6 = document.getElementById('button9')
+        btn6.addEventListener('click',function(){
+            window.scrollTo({
+            top:13190,
+            left:0,
+            behavior:'smooth',
+             })
+            blockBurger.classList.remove('active2');
+        })
+        const btn7 = document.getElementById('button8')
+        btn7.addEventListener('click',function(){
+            window.scrollTo({
+            top:15190,
+            left:0,
+            behavior:'smooth',
+             })
             blockBurger.classList.remove('active2');
         })
     </script>

@@ -9,13 +9,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 .burger-menu{
-    position: absolute;
+    /* position: absolute; */
     width: 80px;
     height: 80px;
-    right: 1400px;
-    top: 37px;
+    margin-right: 1100px;
+    margin-top: 50px;
     cursor: pointer;
 }
 .notice{
@@ -444,13 +445,13 @@ iframe{
     margin-top: 420px;
 }
 .button8{
-    margin-top: 490px;
+    margin-top: 420px;
     width: 154.9px;
     height: 53.33px;
     left: 15px;
 }
 .button9{
-    margin-top: 490px;
+    margin-top: 420px;
     width: 154.9px;
     height: 53.33px;
     left: 192px;
