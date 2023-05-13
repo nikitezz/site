@@ -160,14 +160,15 @@ p{
   }
   .text-title{
     width: 350px;
-    margin-left: -1%;
+    /* margin-left: -1%; */
     margin-bottom: -50px;
     font-size: 35px;
     line-height: 43px;
   }
   .text-obl{
     margin-bottom: -20px;
-    margin-left: -1%;
+    /* margin-left: -1%; */
+    text-align: center;
   }
   .img-map{
     width: 269px;
