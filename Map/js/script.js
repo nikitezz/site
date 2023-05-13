@@ -19,6 +19,7 @@
   const energy = document.getElementById('energy');
   const myGeolocation = document.getElementById('MyGeolocation');
 
+
   var markersCulture = [];
   var markersAttractions = [];
   var markersStarCity = [];
@@ -288,7 +289,7 @@
     blockModalIndustry10.classList.remove('active1_culture');
   })
 
-  // Стареёшие города
+  // Старейшие города (ГОТОВО)
   const blockModalCity1 = document.getElementById('block-modal1-city');
   const closeCity1 = document.getElementById('close1-city').addEventListener('click',function(){
     blockModalCity1.classList.remove('active1_culture');
@@ -313,6 +314,60 @@
   const closePeople1 = document.getElementById('close1-people').addEventListener('click',function(){
     blockModalPeople1.classList.remove('active1_culture');
   })
+
+  const blockModalPeople2 = document.getElementById('block-modal2-people');
+  const closePeople2 = document.getElementById('close2-people').addEventListener('click',function(){
+    blockModalPeople2.classList.remove('active1_culture');
+  })
+
+  const blockModalPeople3 = document.getElementById('block-modal3-people');
+  const closePeople3 = document.getElementById('close3-people').addEventListener('click',()=>{
+    blockModalPeople3.classList.remove('active1_culture');
+  })
+
+  const blockModalPeople4 = document.getElementById('block-modal4-people');
+  const closePeople4 = document.getElementById('close4-people').addEventListener('click',function(){
+    blockModalPeople4.classList.remove('active1_culture');
+  })
+
+  const blockModalPeople5 = document.getElementById('block-modal5-people');
+  const closePeople5 = document.getElementById('close5-people').addEventListener('click',function(){
+    blockModalPeople5.classList.remove('active1_culture');
+  })
+
+  const blockModalPeople6 = document.getElementById('block-modal6-people');
+  const closePeople6 = document.getElementById('close6-people').addEventListener('click',function(){
+    blockModalPeople6.classList.remove('active1_culture');
+  })
+
+  const blockModalPeople7 = document.getElementById('block-modal7-people');
+  const closePeople7 = document.getElementById('close7-people').addEventListener('click',function(){
+    blockModalPeople7.classList.remove('active1_culture');
+  })
+
+  const blockModalPeople8 = document.getElementById('block-modal8-people');
+  const closePeople8 = document.getElementById('close8-people').addEventListener('click',function(){
+    blockModalPeople8.classList.remove('active1_culture');
+  })
+
+  const blockModalPeople9 = document.getElementById('block-modal9-people');
+  const closePeople9 = document.getElementById('close9-people').addEventListener('click',function(){
+    blockModalPeople9.classList.remove('active1_culture');
+  })
+
+  const blockModalPeople10 = document.getElementById('block-modal10-people');
+  const closePeople10 = document.getElementById('close10-people').addEventListener('click',function(){
+    blockModalPeople10.classList.remove('active1_culture');
+  })
+  const blockModalPeople11 = document.getElementById('block-modal11-people');
+  const closePeople11 = document.getElementById('close11-people').addEventListener('click',function(){
+    blockModalPeople11.classList.remove('active1_culture');
+  })
+  const blockModalPeople12 = document.getElementById('block-modal12-people');
+  const closePeople12 = document.getElementById('close12-people').addEventListener('click',function(){
+    blockModalPeople12.classList.remove('active1_culture');
+  })
+
 
 
 
@@ -404,7 +459,7 @@
   starCity.addEventListener('click',function(){
     createMarkersStarCity();
   }) 
-  //Функция для скрытия маркеров
+  //Функция для скрытия маркеров                           
   function hideMarkersStarCity() {
     for (var i = 0; i < markersStarCity.length; i++) {
         mymap.removeLayer(markersStarCity[i]);
@@ -427,16 +482,56 @@
       popupAnchor: [1, -34],
       shadowSize: [41, 41]
   });
-    var marker2 = L.marker([53.7870000,30.2677000], {icon:fiolIcon}).addTo(mymap);
-    marker2.on('click', function() {
+    var marker1 = L.marker([52.42416,31.014281], {icon:fiolIcon}).addTo(mymap);
+    marker1.on('click', function() {
       blockModalPeople1.classList.add('active1_culture')
     });
-    // var marker3 = L.marker([54.9458000,30.7953000], {icon:fiolIcon}).addTo(mymap);
-    // marker3.on('click', function(){
-    //   blockModalMuseums1.classList.add('active1_culture')
-    // });
+    var marker2 = L.marker([52.421101,31.31651], {icon:fiolIcon}).addTo(mymap);
+    marker2.on('click', function(){
+      blockModalPeople2.classList.add('active1_culture')
+    })
+    var marker3 = L.marker([52.411504308776955,30.936413715250897], {icon:fiolIcon}).addTo(mymap);
+    marker3.on('click', function(){
+      blockModalPeople3.classList.add('active1_culture');
+    })
+    var marker4 = L.marker([52.506805,30.768125], {icon:fiolIcon}).addTo(mymap);
+    marker4.on('click', function(){
+      blockModalPeople4.classList.add('active1_culture');
+    })
+    var marker5 = L.marker([52.425687,31.015081], {icon:fiolIcon}).addTo(mymap);
+    marker5.on('click', function(){
+      blockModalPeople5.classList.add('active1_culture');
+    })
+    var marker6 = L.marker([51.940429,30.790727], {icon:fiolIcon}).addTo(mymap);
+    marker6.on('click', function(){
+      blockModalPeople6.classList.add('active1_culture');
+    })
+    var marker7 = L.marker([52.467469,31.024828], {icon:fiolIcon}).addTo(mymap);
+    marker7.on('click', function(){
+      blockModalPeople7.classList.add('active1_culture');
+    })
+    var marker8 = L.marker([52.392304073425706,31.031741190416263], {icon:fiolIcon}).addTo(mymap);
+    marker8.on('click', function(){
+      blockModalPeople8.classList.add('active1_culture');
+    })
+    var marker9 = L.marker([52.351631,30.981268], {icon:fiolIcon}).addTo(mymap);
+    marker9.on('click', function(){
+      blockModalPeople9.classList.add('active1_culture');
+    })
+    var marker10 = L.marker([52.716932,30.567953], {icon:fiolIcon}).addTo(mymap);
+    marker10.on('click', function(){
+      blockModalPeople10.classList.add('active1_culture');
+    })
+    var marker11 = L.marker([52.456045,31.024819], {icon:fiolIcon}).addTo(mymap);
+    marker11.on('click', function(){
+      blockModalPeople11.classList.add('active1_culture');
+    })
+    var marker12 = L.marker([52.54455,30.984412], {icon:fiolIcon}).addTo(mymap);
+    marker12.on('click', function(){
+      blockModalPeople12.classList.add('active1_culture');
+    })
 
-    markersCelebrity.push(marker2);
+    markersCelebrity.push(marker2,marker1,marker3,marker4,marker5,marker6,marker7,marker8,marker9,marker10,marker11,marker12);
   }
   celebrity.addEventListener('click',function(){
     createMarkersCelebrity();
@@ -828,7 +923,7 @@
     
           // Создаем маркер на местоположении пользователя
            var marker = L.marker([lat, lng]).addTo(mymap);
-          marker.bindPopup("<b>Ваше местопложение!</b>"); 
+          marker.bindPopup("<b>Ваше местопложение!</b>");
           // Перемещаем карту к местоположению пользователя
           mymap.setView([lat, lng], 15);
       });
