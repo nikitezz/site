@@ -4,6 +4,7 @@
       attribution: 'Интерактивная карта ГГАЭК',
       maxZoom: 18
   }).addTo(mymap);
+  mymap.attributionControl.setPrefix('');
 
   //Объявление переменных для работы с марк.
   const cancelFilter = document.getElementById('cancelFilter');
