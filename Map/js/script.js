@@ -719,9 +719,6 @@
       blockModalMonuments9.classList.add('active1_culture');
     });
     
-
-
-
     markersMonuments.push(marker1,marker2,marker3,marker4,
                           marker5,marker6,marker7,marker8,marker9);
   }
