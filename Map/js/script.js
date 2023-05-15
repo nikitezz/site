@@ -6,6 +6,7 @@
   }).addTo(mymap);
   mymap.attributionControl.setPrefix('');
 
+    // Получаем местоположение пользователя
   //Объявление переменных для работы с марк.
   const cancelFilter = document.getElementById('cancelFilter');
   const culture = document.getElementById('culture');
@@ -31,6 +32,25 @@
   var markersReserve = [];
   var markersRivers = [];
   var markersEnergy = [];
+
+  function geolocationUser(){
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+          var lat = position.coords.latitude;
+          var lng = position.coords.longitude;
+    
+          // Создаем маркер на местоположении пользователя
+           var marker = L.marker([lat, lng]).addTo(mymap);
+          marker.bindPopup("<b>Ваше местопложение!</b>");
+          // Перемещаем карту к местоположению пользователя
+          mymap.setView([lat, lng], 15);
+      });
+    } else {
+      alert("Извините. Ваше местопложение не определено!");
+    }
+  }
+  myGeolocation.addEventListener('click', geolocationUser);
+
 
   //Культурные ценности (ГОТОВО)
   const blockModalCulture1 = document.getElementById('block-modal1');
@@ -401,6 +421,44 @@
     blockModalPeople20.classList.remove('active1_culture');
   })
 
+  // Памятники
+  const blockModalMonuments1 = document.getElementById('block-modal1-monuments');
+  const closeMonuments1 = document.getElementById('close1-monuments').addEventListener('click',function(){
+    blockModalMonuments1.classList.remove('active1_culture');
+  })
+  const blockModalMonuments2 = document.getElementById('block-modal2-monuments');
+  const closeMonuments2 = document.getElementById('close2-monuments').addEventListener('click',function(){
+    blockModalMonuments2.classList.remove('active1_culture');
+  })
+  const blockModalMonuments3 = document.getElementById('block-modal3-monuments');
+  const closeMonuments3 = document.getElementById('close3-monuments').addEventListener('click',function(){
+    blockModalMonuments3.classList.remove('active1_culture');
+  })
+  const blockModalMonuments4 = document.getElementById('block-modal4-monuments');
+  const closeMonuments4 = document.getElementById('close4-monuments').addEventListener('click',function(){
+    blockModalMonuments4.classList.remove('active1_culture');
+  })
+  const blockModalMonuments5 = document.getElementById('block-modal5-monuments');
+  const closeMonuments5 = document.getElementById('close5-monuments').addEventListener('click',function(){
+    blockModalMonuments5.classList.remove('active1_culture');
+  })
+  const blockModalMonuments6 = document.getElementById('block-modal6-monuments');
+  const closeMonuments6 = document.getElementById('close6-monuments').addEventListener('click',function(){
+    blockModalMonuments6.classList.remove('active1_culture');
+  })
+  const blockModalMonuments7 = document.getElementById('block-modal7-monuments');
+  const closeMonuments7 = document.getElementById('close7-monuments').addEventListener('click',function(){
+    blockModalMonuments7.classList.remove('active1_culture');
+  })
+  const blockModalMonuments8 = document.getElementById('block-modal8-monuments');
+  const closeMonuments8 = document.getElementById('close8-monuments').addEventListener('click',function(){
+    blockModalMonuments8.classList.remove('active1_culture');
+  })
+  const blockModalMonuments9 = document.getElementById('block-modal9-monuments');
+  const closeMonuments9 = document.getElementById('close9-monuments').addEventListener('click',function(){
+    blockModalMonuments9.classList.remove('active1_culture');
+  })
+
 
 
 
@@ -624,15 +682,48 @@
       popupAnchor: [1, -34],
       shadowSize: [41, 41]
   });
-    var marker2 = L.marker([53.7870000,30.2677000], {icon:fiolIcon}).addTo(mymap);
-    marker2.on('click', function() {
-      alert('памятник 1');
+    var marker1 = L.marker([52.4259911963147, 31.010427085477726], {icon:fiolIcon}).addTo(mymap);
+    marker1.on('click', function() {
+      blockModalMonuments1.classList.add('active1_culture');
     });
-    var marker3 = L.marker([54.9458000,30.7953000], {icon:fiolIcon}).addTo(mymap);
+    var marker2 = L.marker([52.408466669936885, 30.942220653924494], {icon:fiolIcon}).addTo(mymap);
+    marker2.on('click', function(){
+      blockModalMonuments2.classList.add('active1_culture');
+    });
+    var marker3 = L.marker([52.42537072926501, 31.014093611229608], {icon:fiolIcon}).addTo(mymap);
     marker3.on('click', function(){
-      alert('памятник 2');
+      blockModalMonuments3.classList.add('active1_culture');
     });
-    markersMonuments.push(marker2,marker3);
+    var marker4 = L.marker([52.56594695127275, 31.172897812475544], {icon:fiolIcon}).addTo(mymap);
+    marker4.on('click', function(){
+      blockModalMonuments4.classList.add('active1_culture');
+    });
+    var marker5 = L.marker([52.73603397001518, 29.679724403375054], {icon:fiolIcon}).addTo(mymap);
+    marker5.on('click', function(){
+      blockModalMonuments5.classList.add('active1_culture');
+    });
+    var marker6 = L.marker([51.940498, 30.806187], {icon:fiolIcon}).addTo(mymap);
+    marker6.on('click', function(){
+      blockModalMonuments6.classList.add('active1_culture');
+    });
+    var marker7 = L.marker([53.02469631005897, 29.40056662057753], {icon:fiolIcon}).addTo(mymap);
+    marker7.on('click', function(){
+      blockModalMonuments7.classList.add('active1_culture');
+    });
+    var marker8 = L.marker([52.9636585454592, 29.77610363199134], {icon:fiolIcon}).addTo(mymap);
+    marker8.on('click', function(){
+      blockModalMonuments8.classList.add('active1_culture');
+    });
+    var marker9 = L.marker([52.463672428740864, 29.264145132111608], {icon:fiolIcon}).addTo(mymap);
+    marker9.on('click', function(){
+      blockModalMonuments9.classList.add('active1_culture');
+    });
+    
+
+
+
+    markersMonuments.push(marker1,marker2,marker3,marker4,
+                          marker5,marker6,marker7,marker8,marker9);
   }
   monuments.addEventListener('click',function(){
     createMarkersMonuments();
@@ -981,25 +1072,6 @@
     hideMarkersRivers();
   })
   
-  // Получаем местоположение пользователя
-  function geolocationUser(){
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-          var lat = position.coords.latitude;
-          var lng = position.coords.longitude;
-    
-          // Создаем маркер на местоположении пользователя
-           var marker = L.marker([lat, lng]).addTo(mymap);
-          marker.bindPopup("<b>Ваше местопложение!</b>");
-          // Перемещаем карту к местоположению пользователя
-          mymap.setView([lat, lng], 15);
-      });
-    } else {
-      alert("Извините. Ваше местопложение не определено!");
-    }
-  }
-  myGeolocation.addEventListener('click', geolocationUser);
-
   //Функции модальных окон
   const btnFiltr = document.getElementById('filtr');
   const modal = document.getElementById('modal');
