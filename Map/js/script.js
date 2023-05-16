@@ -802,7 +802,7 @@
   cancelFilter.addEventListener('click',function(){
     hideMarkersIndustry();
   })
-
+                                          
   //Функция для создание и скрытие маркеров (Музеи)
   function createMarkersMuseums(){
     var fiolIcon = L.icon({
@@ -1091,5 +1091,15 @@
   })
   close2.addEventListener('click',function(){
     blockModalInfo.classList.remove('active2');
+  })
+
+
+  // Route
+  const modalRoute = document.getElementById('block-route');
+  const btnRoute = document.getElementById('btn-route').addEventListener('click',function(){
+    modalRoute.classList.add('active2');
+  })
+  const closeRoute = document.getElementById('close-route').addEventListener('click',function(){
+    modalRoute.classList.remove('active2');
   })
 

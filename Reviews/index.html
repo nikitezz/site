@@ -12,7 +12,7 @@
     <a href="../index.html">
         <img src="./img/1.png" alt="" class="home-img">
     </a>
-    <form class="decor cta" method="post" action="https://sheetdb.io/api/v1/th6o8rxmzz4rt" id="sheetdb" >
+    <form class="decor cta" method="post" action="https://sheetdb.io/api/v1/mqfj1deiecrku" id="sheetdb" >
         <div class="form-left-decoration"></div>
             <div class="form-right-decoration"></div>
                 <div class="circle"></div>
@@ -25,6 +25,9 @@
         </div>
     </form>
     <script>
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
         var form = document.getElementById('sheetdb');
         form.addEventListener("submit",e=>{
             e.preventDefault();
@@ -33,6 +36,9 @@
                 body: new FormData(document.getElementById("sheetdb")),
             }).then(
                     response =>response.json(),
+                    nameInput.value = "",
+                    emailInput.value = "",
+                    messageInput.value = "",
                     alert("Данные отправлены. Благодарим за обратную свзяь!")
                 );
                 

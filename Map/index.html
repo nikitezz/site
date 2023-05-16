@@ -24,6 +24,7 @@
         <img src="./img/info 1.png" alt="" class="info" id="info">
         <a href="../index.html"><button class="button">Назад</button></a>
         <button class="button btn2" id="filtr">Фильтр</button>
+        <button class="button btn3" id="btn-route">Маршрут</button>
         <!-- Модальное окно - Фильтр -->
         <div class="modal-filter" id="modal">
             <img src="./img/close (1) 2.png" alt="" class="close-filter" id="close">
@@ -67,7 +68,18 @@
                 </button>
             </div>
         </div>
-
+        <!-- Построение маршрутов -->
+        <div class="block-information" id="block-route" style="height: 450px; margin-top:100px;">
+            <div class="form-inner">
+                <img src="./img/close (1) 2.png" alt="" class="close-filter" id="close-route">
+                <label for="start">Начало пути:</label><br>
+                <input type="text" placeholder="52.463628, 31.027145" name="start" id="start-route" required autocomplete="off">
+                <label for="end" class="text">Конец пути:</label><br>
+                <input type="text" placeholder="54.872358, 31.027145" name="end" id="end-route" required autocomplete="off">   
+                <input type="submit" value="Построить" style="cursor: pointer;">
+                <p class="text-danger-route">Для построения пути, необходимо указать начало и конец пути в виде географических координат</p>
+            </div>         
+        </div>
         <!-- Модальное окно - информация о метках -->
         <div class="block-information" id="block-info">
             <img src="./img/close (1) 2.png" alt="" class="close-filter" id="close2">
