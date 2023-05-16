@@ -141,8 +141,8 @@ label{
     height: 577px;
     background-color: #FFFFFF;
     border-radius: 15px;
-    bottom: 100px;
-    left: 57%;
+    bottom: 90px;
+    left: 30%;
     z-index: 999;
     box-shadow: 0px 0px 10px 2px grey;
     display: none;
@@ -304,6 +304,9 @@ label{
     border-radius: 10px;
     box-shadow: 0px 0px 10px 1px gray;
 }
+.route{
+    height: 650px;
+}
 
 
 
@@ -345,11 +348,19 @@ label{
     }
     .block-information{
         width: 350px;
-        height: 400px;
+        height: 300px;
         left: 10px;
         bottom: 20px;
         overflow-y: scroll; /* прокрутка по вертикали */
     }
+    .form-inner{
+        width: 350px;
+        height: 300px;
+        left: 10px;
+        bottom: 20px;
+        overflow-y: scroll; /* прокрутка по вертикали */
+    }
+
     .markerImg{
         left: 10px;
         width: 40px;

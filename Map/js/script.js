@@ -1134,10 +1134,11 @@
     document.getElementById('end-route-lng').value = Endlongitude;
 
     userMarker.setLatLng([Endlatitude, Endlongitude]);
-
+    
     var EndMarker = L.marker();
     EndMarker.addTo(mymap);
   }
   mymap.on('click', onMapClick);
+
 
   const btnMyGeo = document.getElementById('mygeo').addEventListener('click',geolocationUser);
