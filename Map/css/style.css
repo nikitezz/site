@@ -345,9 +345,10 @@ label{
     }
     .block-information{
         width: 350px;
-        height: 560px;
+        height: 400px;
         left: 10px;
         bottom: 20px;
+        overflow-y: scroll; /* прокрутка по вертикали */
     }
     .markerImg{
         left: 10px;
@@ -398,9 +399,5 @@ label{
     .content-modal{
         font-size: 10px;
     }
-    .block-route{
-        height: 400px;
-        overflow: hidden;
-        overflow-y: scroll; /* прокрутка по вертикали */
-    }
+
 }
