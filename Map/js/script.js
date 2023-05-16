@@ -1085,6 +1085,7 @@
   const closeRoute = document.getElementById('close-route').addEventListener('click',function(){
     modalRoute.classList.remove('active2');
   })
+  var routeLayer = null;
 
   const sumbit = document.getElementById('submit').addEventListener('click',function(){
     var inputValueStartLat = parseFloat(document.getElementById('start-route-lat').value);
@@ -1134,11 +1135,19 @@
     document.getElementById('end-route-lng').value = Endlongitude;
 
     userMarker.setLatLng([Endlatitude, Endlongitude]);
-    
     var EndMarker = L.marker();
-    EndMarker.addTo(mymap);
+
+    control.setWaypoints([]);
+
   }
   mymap.on('click', onMapClick);
-
-
+  
   const btnMyGeo = document.getElementById('mygeo').addEventListener('click',geolocationUser);
+  const cancelRouteBtn = document.getElementById('CancelSubmitRoute');
+
+  function onCancelRouteClick() {
+    alert("Отмена маршрута на данный момент не работает");
+
+    control.setWaypoints([]);
+  }
+  cancelRouteBtn.addEventListener('click',onCancelRouteClick)
