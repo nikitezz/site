@@ -67,15 +67,18 @@
             </div>
         </div>
         <!-- Построение маршрутов -->
-        <div class="block-information" id="block-route" style="height: 450px; margin-top:100px;">
+        <div class="block-information block-route" id="block-route" style="height: 650px; margin-top:100px;">
             <div class="form-inner">
                 <img src="./img/close (1) 2.png" alt="" class="close-filter" id="close-route">
                 <label for="start">Начало пути:</label><br>
-                <input type="text" placeholder="52.463628, 31.027145" name="start" id="start-route" required autocomplete="off">
+                <input type="text" placeholder="52.463628" name="start" id="start-route-lat" required autocomplete="off">
+                <input type="text" placeholder="31.027145" name="start" id="start-route-lng" required autocomplete="off">
+                <input type="submit" value="Использовать моё местоположение:" style="cursor: pointer;  width: 280px;" id="mygeo">
                 <label for="end" class="text">Конец пути:</label><br>
-                <input type="text" placeholder="54.872358, 31.027145" name="end" id="end-route" required autocomplete="off">   
-                <input type="submit" value="Построить" style="cursor: pointer;" id="submit">
-                <p class="text-danger-route">Для построения пути, необходимо указать начало и конец пути в виде географических координат</p>
+                <input type="text" placeholder="54.872358" name="end" id="end-route-lat" required autocomplete="off">   
+                <input type="text" placeholder="31.027145" name="end" id="end-route-lng" required autocomplete="off">   
+                <p class="text-danger-route" style="margin-top: -20px;">Вы можете выбрать на карте место, куда хотите построить маршрут</p>
+                <input type="submit" value="Построить" style="cursor: pointer;margin-top: -10px;" id="submit">
             </div>         
         </div>
         <!-- Модальное окно - информация о метках -->

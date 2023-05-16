@@ -34,24 +34,6 @@
   var markersRivers = [];
   var markersEnergy = [];
 
-  function geolocationUser(){
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-          var lat = position.coords.latitude;
-          var lng = position.coords.longitude;
-    
-          // Создаем маркер на местоположении пользователя
-           var marker = L.marker([lat, lng]).addTo(mymap);
-          marker.bindPopup("<b>Ваше местопложение!</b>");
-          // Перемещаем карту к местоположению пользователя
-          mymap.setView([lat, lng], 15);
-      });
-    } else {
-      alert("Извините. Ваше местопложение не определено!");
-    }
-  }
-  myGeolocation.addEventListener('click', geolocationUser);
-
 
   //Культурные ценности (ГОТОВО)
   const blockModalCulture1 = document.getElementById('block-modal1');
@@ -1104,21 +1086,58 @@
     modalRoute.classList.remove('active2');
   })
 
-  
   const sumbit = document.getElementById('submit').addEventListener('click',function(){
-    routeMap();
+    var inputValueStartLat = parseFloat(document.getElementById('start-route-lat').value);
+    var inputValueStartLng = parseFloat(document.getElementById('start-route-lng').value);
+    var inputValueEndLat = parseFloat(document.getElementById('end-route-lat').value);
+    var inputValueEndLng = parseFloat(document.getElementById('end-route-lng').value);
+
+    var control = L.Routing.control({
+      waypoints: [
+        L.latLng(inputValueStartLat, inputValueStartLng), // Координаты начальной точки
+        L.latLng(inputValueEndLat, inputValueEndLng) // Координаты конечной точки
+      ]
+    }).addTo(mymap);  
     modalRoute.classList.remove('active2');
   })
 
-  function routeMap(){
-    var inputValueStart = document.getElementById('start-route').value;
-    var inputValueEnd = document.getElementById('end-route').value;
-    var control = L.Routing.control({
-      waypoints: [
-        L.latLng(inputValueStart), // Координаты начальной точки
-        L.latLng(inputValueEnd) // Координаты конечной точки
-      ]
-    }).addTo(mymap);  
-  }
-  
+  //Geolocation user
+  function geolocationUser(){
+    mymap.locate({ setView: true, maxZoom: 16 });
+      var userMarker = L.marker();
+      function onLocationFound(e) {
+          var latitude = e.latitude;
+          var longitude = e.longitude;
 
+          document.getElementById('start-route-lat').value = latitude;
+          document.getElementById('start-route-lng').value = longitude;
+
+          userMarker.setLatLng([latitude, longitude]);
+          userMarker.bindPopup("<b>Ваше местоположение!</b>");
+          userMarker.addTo(mymap);
+      }
+      function onLocationError(e) {
+          alert(e.message);
+      }
+
+      mymap.on('locationfound', onLocationFound);
+      mymap.on('locationerror', onLocationError);
+  }
+  myGeolocation.addEventListener('click', geolocationUser);
+
+  //Geolocation map
+  function onMapClick(e) {
+    var Endlatitude = e.latlng.lat;
+    var Endlongitude = e.latlng.lng;
+
+    document.getElementById('end-route-lat').value = Endlatitude;
+    document.getElementById('end-route-lng').value = Endlongitude;
+
+    userMarker.setLatLng([Endlatitude, Endlongitude]);
+
+    var EndMarker = L.marker();
+    EndMarker.addTo(mymap);
+  }
+  mymap.on('click', onMapClick);
+
+  const btnMyGeo = document.getElementById('mygeo').addEventListener('click',geolocationUser);

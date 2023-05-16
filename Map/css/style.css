@@ -147,6 +147,10 @@ label{
     box-shadow: 0px 0px 10px 2px grey;
     display: none;
 }
+.block-route{
+    left: 30%;
+    bottom: 80px;
+}
 .active2{
     display: block;
 }
