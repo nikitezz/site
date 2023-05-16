@@ -6,6 +6,7 @@
   }).addTo(mymap);
   mymap.attributionControl.setPrefix('');
 
+
     // Получаем местоположение пользователя
   //Объявление переменных для работы с марк.
   const cancelFilter = document.getElementById('cancelFilter');
@@ -1102,4 +1103,22 @@
   const closeRoute = document.getElementById('close-route').addEventListener('click',function(){
     modalRoute.classList.remove('active2');
   })
+
+  
+  const sumbit = document.getElementById('submit').addEventListener('click',function(){
+    routeMap();
+    modalRoute.classList.remove('active2');
+  })
+
+  function routeMap(){
+    var inputValueStart = document.getElementById('start-route').value;
+    var inputValueEnd = document.getElementById('end-route').value;
+    var control = L.Routing.control({
+      waypoints: [
+        L.latLng(inputValueStart), // Координаты начальной точки
+        L.latLng(inputValueEnd) // Координаты конечной точки
+      ]
+    }).addTo(mymap);  
+  }
+  
 

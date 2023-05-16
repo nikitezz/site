@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="../img/image-removebg.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-     crossorigin=""/>
-     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-     crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
     <title>Интерективная карта</title>
     <style>
         
@@ -76,7 +74,7 @@
                 <input type="text" placeholder="52.463628, 31.027145" name="start" id="start-route" required autocomplete="off">
                 <label for="end" class="text">Конец пути:</label><br>
                 <input type="text" placeholder="54.872358, 31.027145" name="end" id="end-route" required autocomplete="off">   
-                <input type="submit" value="Построить" style="cursor: pointer;">
+                <input type="submit" value="Построить" style="cursor: pointer;" id="submit">
                 <p class="text-danger-route">Для построения пути, необходимо указать начало и конец пути в виде географических координат</p>
             </div>         
         </div>
