@@ -292,6 +292,29 @@
   const closeIndustry10 = document.getElementById('close10-industry').addEventListener('click',function(){
     blockModalIndustry10.classList.remove('active1_culture');
   })
+  const blockModalIndustry11 = document.getElementById('block-modal11-industry');
+  const closeIndustry11 = document.getElementById('close11-industry').addEventListener('click',function(){
+    blockModalIndustry11.classList.remove('active1_culture');
+  })
+  const blockModalIndustry12 = document.getElementById('block-modal12-industry');
+  const closeIndustry12 = document.getElementById('close12-industry').addEventListener('click',function(){
+    blockModalIndustry12.classList.remove('active1_culture');
+  })
+  const blockModalIndustry13 = document.getElementById('block-modal13-industry');
+  const closeIndustry13 = document.getElementById('close13-industry').addEventListener('click',function(){
+    blockModalIndustry13.classList.remove('active1_culture');
+  })
+  const blockModalIndustry14 = document.getElementById('block-modal14-industry');
+  const closeIndustry14 = document.getElementById('close14-industry').addEventListener('click',function(){
+    blockModalIndustry14.classList.remove('active1_culture');
+  })
+  const blockModalIndustry15 = document.getElementById('block-modal15-industry');
+  const closeIndustry15 = document.getElementById('close15-industry').addEventListener('click',function(){
+    blockModalIndustry15.classList.remove('active1_culture');
+  })
+
+
+
 
   // Старейшие города (ГОТОВО)
   const blockModalCity1 = document.getElementById('block-modal1-city');
@@ -770,7 +793,33 @@
     marker11.on('click', function(){
       blockModalIndustry10.classList.add('active1_culture')
     });
-    markersIndustry.push(marker2,marker3,marker4,marker5,marker6,marker7,marker8,marker9,marker10,marker11);
+    var marker12 = L.marker([52.38521893775484,31.021035988912487], {icon:fiolIcon}).addTo(mymap);
+    marker12.on('click',function(){
+      blockModalIndustry11.classList.add('active1_culture');
+    })
+    var marker13 = L.marker([52.437026,30.988212], {icon:fiolIcon}).addTo(mymap);
+    marker13.on('click',function(){
+      blockModalIndustry12.classList.add('active1_culture');
+    })
+    var marker14 = L.marker([52.454695,30.916706], {icon:fiolIcon}).addTo(mymap);
+    marker14.on('click',function(){
+      blockModalIndustry13.classList.add('active1_culture');
+    })
+    var marker15 = L.marker([52.38331784235684,31.024568255294778], {icon:fiolIcon}).addTo(mymap);
+    marker15.on('click',function(){
+      blockModalIndustry14.classList.add('active1_culture');
+    })
+    var marker16 = L.marker([52.424051,30.98311], {icon:fiolIcon}).addTo(mymap);
+    marker16.on('click',function(){
+      blockModalIndustry15.classList.add('active1_culture');
+    })
+
+
+
+    markersIndustry.push(marker2,marker3,marker4,marker5,
+                         marker6,marker7,marker8,marker9,
+                         marker10,marker11,marker12, marker13,
+                         marker14,marker15,marker16);
   }
   industry.addEventListener('click',function(){
     createMarkersIndustry();
@@ -1085,7 +1134,6 @@
   const closeRoute = document.getElementById('close-route').addEventListener('click',function(){
     modalRoute.classList.remove('active2');
   })
-  var routeLayer = null;
 
   const sumbit = document.getElementById('submit').addEventListener('click',function(){
     var inputValueStartLat = parseFloat(document.getElementById('start-route-lat').value);
@@ -1117,12 +1165,8 @@
           userMarker.bindPopup("<b>Ваше местоположение!</b>");
           userMarker.addTo(mymap);
       }
-      function onLocationError(e) {
-          alert(e.message);
-      }
 
       mymap.on('locationfound', onLocationFound);
-      mymap.on('locationerror', onLocationError);
   }
   myGeolocation.addEventListener('click', geolocationUser);
 
@@ -1143,11 +1187,10 @@
   mymap.on('click', onMapClick);
   
   const btnMyGeo = document.getElementById('mygeo').addEventListener('click',geolocationUser);
-  const cancelRouteBtn = document.getElementById('CancelSubmitRoute');
+  // const cancelRouteBtn = document.getElementById('CancelSubmitRoute');
 
-  function onCancelRouteClick() {
-    alert("Отмена маршрута на данный момент не работает");
-
-    control.setWaypoints([]);
-  }
-  cancelRouteBtn.addEventListener('click',onCancelRouteClick)
+  // function onCancelRouteClick() {
+  //   alert("Отмена маршрута на данный момент не работает");
+  //   control.setWaypoints([]);
+  // }
+  // cancelRouteBtn.addEventListener('click',onCancelRouteClick)
