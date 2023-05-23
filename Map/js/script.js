@@ -1194,3 +1194,28 @@
   //   control.setWaypoints([]);
   // }
   // cancelRouteBtn.addEventListener('click',onCancelRouteClick)
+
+
+  var myDiv = document.getElementById('block-route');
+var isDragging = false;
+var startX;
+var startY;
+
+myDiv.addEventListener('mousedown', function(event) {
+  isDragging = true;
+  startX = event.clientX - myDiv.offsetLeft;
+  startY = event.clientY - myDiv.offsetTop;
+});
+
+document.addEventListener('mousemove', function(event) {
+  if (isDragging) {
+    var newLeft = event.clientX - startX;
+    var newTop = event.clientY - startY;
+    myDiv.style.left = newLeft + 'px';
+    myDiv.style.top = newTop + 'px';
+  }
+});
+
+document.addEventListener('mouseup', function() {
+  isDragging = false;
+});

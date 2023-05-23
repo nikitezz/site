@@ -150,6 +150,7 @@ label{
 .block-route{
     left: 30%;
     bottom: 80px;
+    position: absolute;
 }
 .active2{
     display: block;
