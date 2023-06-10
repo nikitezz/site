@@ -1219,3 +1219,18 @@ document.addEventListener('mousemove', function(event) {
 document.addEventListener('mouseup', function() {
   isDragging = false;
 });
+
+document.querySelectorAll('.rating').forEach(dom => {
+  let id = 'rating_' + dom.dataset.name;
+  for(var i = 0; i < 5; i++)
+    dom.innerHTML += `
+      <label for=${id}_${i}></label>
+      <input type=radio ${dom.dataset.value-1===i&&'checked'||''} 
+             name=${id} 
+             id=${id}_${i} 
+             onclick="ratingChanged('${dom.dataset.name}', ${i+1})">`;
+});
+
+function ratingChanged(id, value){
+  console.log(id, value);
+}
